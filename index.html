@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AliveNPC | Building NPCs That Understand</title>
+    <meta name="description" content="AliveNPC is a modular, cognitive-driven NPC system designed to build characters with memory, consciousness, and narrative capabilities.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+    <header class="site-header">
+        <div class="container">
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" aria-label="Toggle Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <!-- Logo removed from header as requested -->
+            <div class="logo-container" style="display: none;">
+                <img src="assets/logo/dark/logo_header.png" alt="AliveNPC Logo" class="site-logo" id="header-logo">
+                <!-- Fallback text if logo fails or for SEO, though image alt covers it -->
+                <!-- <div class="logo-text">AliveNPC</div> -->
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#home" data-i18n="nav.home">Home</a></li>
+                    <li><a href="#introduction" data-i18n="nav.concept">Concept</a></li>
+                    <li><a href="#roadmap" data-i18n="nav.progress">Progress</a></li>
+                    <li><a href="#vision" data-i18n="nav.vision">Vision</a></li>
+                </ul>
+            </nav>
+            <div class="header-controls">
+                <button id="theme-toggle" class="icon-btn" aria-label="Toggle Theme">
+                    <svg class="icon-sun" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                    <svg class="icon-moon" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                </button>
+                <div class="lang-select-wrapper">
+                    <select id="lang-toggle" class="lang-select" aria-label="Switch Language">
+                        <option value="zh" selected>中文</option>
+                        <option value="en">English</option>
+                    </select>
+                    <svg class="chevron-down" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="home-section">
+            <div class="home-bg-overlay"></div>
+            <div class="container home-content fade-in-up">
+                <img src="assets/logo/dark/logo_title.png" alt="AliveNPC" class="title-logo" id="title-logo">
+                <p class="slogan" data-i18n="home.slogan">Building NPCs That Understand.</p>
+                <p class="sub-slogan" data-i18n="home.subSlogan">From Scripted Characters to Living Intelligence.</p>
+                <p class="description" data-i18n="home.description">A modular framework for constructing cognitive, memory-driven, and conscious virtual entities.</p>
+                <a href="#introduction" class="btn explore-btn" data-i18n="home.explore">Explore System</a>
+            </div>
+        </section>
+
+        <!-- Introduction Section -->
+        <section id="introduction" class="section">
+            <div class="container">
+                <h2 class="section-title fade-in-up" data-i18n="intro.title">Core Concept</h2>
+                <div class="content-wrapper fade-in-up delay-100">
+                    <p class="intro-text" data-i18n="intro.text1">
+                        AliveNPC is not just a chatbot wrapper. It is a comprehensive <strong>Understanding-type NPC System</strong> designed to give virtual characters true cognitive capabilities.
+                    </p>
+                    <p class="intro-text" data-i18n="intro.text2">
+                        Moving beyond simple state machines, AliveNPC integrates perception, memory, and consciousness modules to create characters that remember, learn, and act with intent.
+                    </p>
+                    <div class="concept-diagram">
+                        <div class="diagram-box perception" data-i18n="modules.perception">Perception</div>
+                        <div class="diagram-arrow">↓</div>
+                        <div class="diagram-row">
+                            <div class="diagram-box memory" data-i18n="modules.memory">Memory</div>
+                            <div class="diagram-box consciousness" data-i18n="modules.consciousness">Consciousness</div>
+                        </div>
+                        <div class="diagram-arrow">↓</div>
+                        <div class="diagram-box behavior" data-i18n="modules.behavior">Behavior</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Development Progress Section -->
+        <section id="roadmap" class="section">
+            <div class="container">
+                <h2 class="section-title fade-in-up" data-i18n="progress.title">Development Progress</h2>
+                <div class="timeline">
+                    <div class="timeline-item fade-in-up delay-100">
+                        <div class="timeline-dot completed"></div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-title" data-i18n="progress.item1.title">Architecture Design</h3>
+                            <span class="timeline-status completed" data-i18n="status.completed">Completed</span>
+                            <p data-i18n="progress.item1.desc">Core modular structure and data flow definitions finalized.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item fade-in-up delay-200">
+                        <div class="timeline-dot completed"></div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-title" data-i18n="progress.item2.title">Event Protocol</h3>
+                            <span class="timeline-status completed" data-i18n="status.defined">Defined</span>
+                            <p data-i18n="progress.item2.desc">Standardized communication protocols between internal modules.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item fade-in-up delay-300">
+                        <div class="timeline-dot in-progress"></div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-title" data-i18n="progress.item3.title">Sandbox Testing Framework</h3>
+                            <span class="timeline-status in-progress" data-i18n="status.inProgress">In Progress</span>
+                            <p data-i18n="progress.item3.desc">Building the initial environment for module interaction testing.</p>
+                        </div>
+                    </div>
+                     <div class="timeline-item fade-in-up delay-400">
+                        <div class="timeline-dot pending"></div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-title" data-i18n="progress.item4.title">Memory Integration</h3>
+                            <span class="timeline-status pending" data-i18n="status.planned">Planned</span>
+                            <p data-i18n="progress.item4.desc">Connecting vector database for long-term memory persistence.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vision Section -->
+        <section id="vision" class="section">
+            <div class="container">
+                <h2 class="section-title fade-in-up" data-i18n="vision.title">Vision & Philosophy</h2>
+                <div class="vision-content fade-in-up delay-100">
+                    <p class="vision-statement" data-i18n="vision.statement">
+                        Our long-term goal is to build a truly <strong>"Understanding-type NPC"</strong>—an entity that doesn't just recite lines, but comprehends its existence within the virtual world.
+                    </p>
+                    <div class="vision-grid">
+                        <div class="vision-item">
+                            <h4 data-i18n="vision.item1.title">Dynamic Games</h4>
+                            <p data-i18n="vision.item1.desc">NPCs that adapt to player choices in real-time without rigid scripting.</p>
+                        </div>
+                        <div class="vision-item">
+                            <h4 data-i18n="vision.item2.title">Virtual Worlds</h4>
+                            <p data-i18n="vision.item2.desc">Autonomous agents populating the metaverse with genuine interactions.</p>
+                        </div>
+                        <div class="vision-item">
+                            <h4 data-i18n="vision.item3.title">AI Narrative</h4>
+                            <p data-i18n="vision.item3.desc">Systems capable of co-creating stories with human users.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="#" class="footer-link">GitHub</a>
+                <a href="#" class="footer-link">Email</a>
+                <a href="#" class="footer-link">Documentation</a>
+            </div>
+            <p class="copyright">&copy; 2026 AliveNPC Project. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
